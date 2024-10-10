@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "outDir": "dist",
+      "baseUrl": ".",
+      "noImplicitAny": false,
+      "strict": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "paths": {
+        "*": ["node_modules/*", "src/*"]
+      },
+      "esModuleInterop": true,
+      "noEmit": false,
+      "isolatedModules": true,
+      /* Advanced Options */
+      "skipLibCheck": true /* Skip type checking of declaration files. */,
+      "allowSyntheticDefaultImports": true,
+      "declaration": true,
+      "declarationMap": true, // Allow jumping to source file instead of 'd.ts' file
+      "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
+      "resolveJsonModule": true // Allow importing .json files
+    },
+    "include": [
+      "src/**/*.ts",
+      // "tests/**/*",
+    ],
+    "exclude": ["./build/**/*"]
+  }
+  

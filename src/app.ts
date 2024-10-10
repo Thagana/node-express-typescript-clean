@@ -1,23 +1,22 @@
 // App module
 import { appServerFactory } from './presentation/http/app';
 
-// Repositories / Interface
-import { IExampleRepository } from './domain/example/example.repository';
-
 // Repositories
-import { exampleRepositoryFactory } from './data/repositories/example'
+import { todoRepositoryFactory } from './data/repositories/todo'
 
 // Services Factories
-import { exampleServiceFactory } from './domain/example/example.service';
-
+import { todoServiceFactory } from './domain/todo/todo.service';
 
 // Init repositories
-const exampleRepository: IExampleRepository = exampleRepositoryFactory.init();
+const todoRepository = todoRepositoryFactory.init();
 
-const exampleService = exampleServiceFactory.init(exampleRepository)
+
+const todoService = todoServiceFactory.init({
+    todoRepository: todoRepository
+})
 
 const app = appServerFactory.init({
-    exampleService
+    todoService
 })
 
 export default app;

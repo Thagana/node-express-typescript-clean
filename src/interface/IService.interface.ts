@@ -1,5 +1,5 @@
-import {IExample} from '../domain/example/example.service';
+import { ITodoService } from "../domain/todo/todo.service";
 
 export interface IService {
-    exampleService: IExample
+    todoService: ITodoService
 }

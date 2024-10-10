@@ -1,3 +1,5 @@
+import { ITodoRepository } from "../domain/todo/todo.repository";
+
 export interface IRepository {
-    getExampleData(): string;
+    todoRepository: ITodoRepository
 }
